@@ -1,0 +1,8 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        hashmap=defaultdict(int)
+        for i in nums:
+            hashmap[i] +=1
+        keys = sorted(hashmap, key = hashmap.get)
+        return keys[-k:]
+        
